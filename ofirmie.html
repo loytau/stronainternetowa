@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackaLabs</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="description" content="Firma szkoleniowa HackaLabs">
+    <meta name="keywords" content="szkolenia, HackaLabs, szkolenie z cyberbezpieczeństwa">
+    <meta name="author" content="Bartosz Łabądź">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="gora">
+        <h1 class="Czcionka">HackaLabs</h1>
+        <h3 class="Czcionka">Firma Szkoleniowa</h3>
+        <nav>
+            <a href="index.html" class="przycisk">Strona Główna</a>
+            <a href="szkolenia.html" class="przycisk">Szkolenia</a>
+            <a href="galeria.html" class="przycisk">Galeria</a>
+            <a href="kontakt.html" class="przycisk">Kontakt</a>
+        </nav>
+    </header>
+    <main class="bold">
+        <h1 class="Czcionka">O firmie</h1>
+        <p>HackaLabs - Profesjonaliści w świecie nowoczesnych technologii</p>
+
+        <p>
+        Firma HackaLabs to zespół specjalistów, którzy łączą pasję do technologii z wieloletnim doświadczeniem w branży IT.<br>
+        Od początku naszej działalności koncentrujemy się na dostarczaniu kompleksowych rozwiązań informatycznych,<br>
+        które wspierają rozwój przedsiębiorstw, zwiększają ich efektywność i bezpieczeństwo działania w cyfrowym świecie.<br>
+        </p>
+        <p>
+        Nasze usługi obejmują projektowanie stron internetowych, tworzenie dedykowanego oprogramowania, doradztwo technologiczne oraz cyberbezpieczeństwo.<br>
+        Każdy projekt traktujemy indywidualnie, analizując potrzeby i cele biznesowe klienta, by dostarczyć rozwiązanie idealnie dopasowane do jego oczekiwań.<br>
+        </p>
+        <p>
+        W HackaLabs wierzymy, że technologia ma służyć człowiekowi, a nie odwrotnie. Dlatego projektujemy i wdrażamy systemy, które nie tylko spełniają wysokie standardy techniczne, ale też są intuicyjne i przyjazne w obsłudze.<br>
+        Współpracujemy zarówno z małymi firmami, jak i dużymi organizacjami, zapewniając pełne wsparcie - od analizy potrzeb po utrzymanie systemów po wdrożeniu.<br>
+        </p>
+        <p>
+        Naszym priorytetem jest bezpieczeństwo danych oraz stabilność działania systemów informatycznych.<br>
+        Dzięki połączeniu wiedzy z zakresu cyberbezpieczeństwa i inżynierii oprogramowania gwarantujemy naszym klientom rozwiązania niezawodne, skalowalne i odporne na zagrożenia cyfrowe.<br>
+        </p>
+        HackaLabs - Twój zaufany partner w świecie cyfrowych innowacji.<br>
+        <br>
+        <br>
+        <div id="player"></div>
+
+  <!-- Załadowanie YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    let player;
+    const startTime = 82;
+    const endTime = 88;
+
+    // Funkcja wywoływana przez API po załadowaniu
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: 'Sn0jXOkE0_w',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          start: startTime,
+          modestbranding: 1,
+          rel: 0,
+          mute: 1 // ✅ WYMAGANE, żeby autoplay działał w przeglądarkach!
+        },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        // Pętla: wracaj do startTime po osiągnięciu endTime
+        setInterval(() => {
+          const currentTime = player.getCurrentTime();
+          if (currentTime >= endTime) {
+            player.seekTo(startTime);
+          }
+        }, 100);
+      }
+    }
+  </script>
+    </main>
+    <footer>
+        <p><a href="#gora" class="przycisk-powrot">Powrót do góry</a></p>
+        <p>© Copyright by Bartosz Łabądź</p>
+    </footer>
+</body>
+</html>

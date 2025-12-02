@@ -1,0 +1,163 @@
+
+body{
+    font-family: Arial, sans-serif;
+    background:#488B56;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: #73E08B;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+header{
+    background: linear-gradient(to bottom, #73E08B, #488B56);
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+nav a.przycisk{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to top right, #036336, #73E08B);
+    margin: 3px auto;
+    text-align: center;
+    padding: 12px;
+    border: solid black 1px;
+    width: 100%;
+    max-width: 200px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+nav a.przycisk:hover{
+    background: linear-gradient(to top right, #036336, #73E08B);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+section{
+    padding: 15px;
+    background-color: #73E08B;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+footer{
+    background: linear-gradient(to top, #000000,#488B56);
+    color: rgb(167, 166, 166);
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+footer a.przycisk-inni{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to top, #036336, #73E08B);
+    margin: 3px auto;
+    text-align: center;
+    padding: 7px;
+    border: solid black 1px;
+    width: 100%;
+    max-width: 400px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+footer a.przycisk-inni:hover{
+    background: linear-gradient(to top, #036336, #73E08B);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+.Czcionka{
+    font-family: Bradley Hand, cursive;
+
+}
+footer a.przycisk-powrot{
+    display: block;
+    color: black;
+    background: linear-gradient(to bottom left, #40c1c59a, #73E08B);
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    border: solid black 1px;
+    width: 100%;
+    max-width: 750px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+footer a.przycisk-powrot:hover{
+    background: linear-gradient(to bottom left, #40c1c59a, #73E08B);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+.bold{
+    font-weight: bold;
+}
+dt{
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+    padding-left: 25px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+dd {
+  margin-bottom: 30px;
+}
+ul{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+ul.przyciski-inni{
+    list-style-type: none;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+}
+ul.Projektowanie-stron{
+    list-style-image: url('kropek.png');
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    padding-left: 25px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+ul.Projektowanie-stron li{
+    margin-bottom: 12px;
+}
+ul.Galeria li{
+    margin-bottom: 12px;
+}
